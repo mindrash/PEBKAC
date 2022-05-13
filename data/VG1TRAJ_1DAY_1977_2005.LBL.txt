@@ -1,0 +1,120 @@
+PDS_VERSION_ID                = PDS3                                          
+DATA_SET_ID                   = "VG1-SS-POS-6-1DAY-V1.0"                      
+PRODUCT_ID                    = "VG1TRAJ_1DAY_1977_2005"                      
+PRODUCT_TYPE                  = DATA                                          
+PRODUCT_VERSION_ID            = "1.0"                                         
+PRODUCT_CREATION_TIME         = 2009-02-16T08:45                              
+                                                                              
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 62                                            
+FILE_RECORDS                  = 10000                                         
+                                                                              
+START_TIME                    = 1977-09-09                                    
+STOP_TIME                     = 2005-01-24                                    
+SPACECRAFT_CLOCK_START_COUNT  = "N/A"                                         
+SPACECRAFT_CLOCK_STOP_COUNT   = "N/A"                                         
+                                                                              
+INSTRUMENT_HOST_NAME          = "VOYAGER 1"                                   
+INSTRUMENT_HOST_ID            = "VG1"                                         
+MISSION_PHASE_NAME            = "CRUISE"                                      
+TARGET_NAME                   = "SOLAR SYSTEM"                                
+INSTRUMENT_NAME               = "N/A"                                         
+INSTRUMENT_ID                 = "POS"                                         
+DESCRIPTION                   = "                                             
+      Voyager 1 daily position (trajectory) data in Solar Ecliptic and        
+      Heliographic (HG) coordinates. The data begin in 1977 and go through    
+      the beginning of 2005."                                                 
+                                                                              
+^TABLE                        = "VG1TRAJ_1DAY_1977_2005.TAB"                  
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT          = ASCII                                         
+  ROWS                        = 10000                                         
+  COLUMNS                     = 7                                             
+  ROW_BYTES                   = 62                                            
+  OBJECT                      = COLUMN                                        
+    NAME                      = "DATE"                                        
+    COLUMN_NUMBER             = 1                                             
+    UNIT                      = "N/A"                                         
+    DATA_TYPE                 = CHARACTER                                     
+    START_BYTE                = 2                                             
+    BYTES                     = 11                                            
+    DESCRIPTION               = "                                             
+      Sample date (UTC) in the format YYYY DDD.DD where YYYY=year,            
+      and DDD.DD=decimal day (e.g. 1977 252.00)."                             
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "Range"                                       
+    COLUMN_NUMBER             = 2                                             
+    UNIT                      = "AU"                                          
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 14                                            
+    BYTES                     = 8                                             
+    MISSING_CONSTANT          = 0.000                                         
+    DESCRIPTION               = "                                             
+      Heliocentric range in AU"                                               
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "SE_LAT"                                      
+    COLUMN_NUMBER             = 3                                             
+    UNIT                      = "DEGREE"                                      
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 23                                            
+    BYTES                     = 9                                             
+    MISSING_CONSTANT          = 00.0000                                       
+    DESCRIPTION               = "                                             
+      Solar Ecliptic (SE) latitude in degrees"                                
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "SE_LON"                                      
+    COLUMN_NUMBER             = 4                                             
+    UNIT                      = "DEGREE"                                      
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 33                                            
+    BYTES                     = 6                                             
+    MISSING_CONSTANT          = 000.00                                        
+    DESCRIPTION               = "                                             
+      Solar Ecliptic (SE) longitude in degrees"                               
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "HG_LAT"                                      
+    COLUMN_NUMBER             = 5                                             
+    UNIT                      = "DEGREE"                                      
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 40                                            
+    BYTES                     = 8                                             
+    MISSING_CONSTANT          = 0.0000                                        
+    DESCRIPTION               = "                                             
+       Solar Heliographic (HG) latitude in degrees"                           
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "HG_LON"                                      
+    COLUMN_NUMBER             = 6                                             
+    UNIT                      = "DEGREE"                                      
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 49                                            
+    BYTES                     = 6                                             
+    MISSING_CONSTANT          = 0.00                                          
+    DESCRIPTION               = "                                             
+       Solar Heliographic (HG) longitude in degrees"                          
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "IHG_LON"                                     
+    COLUMN_NUMBER             = 7                                             
+    UNIT                      = "DEGREE"                                      
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 56                                            
+    BYTES                     = 6                                             
+    MISSING_CONSTANT          = 0.000                                         
+    DESCRIPTION               = "                                             
+       Inertial Solar Heliographic longitude in degrees with respect to       
+       the ascending node of the solar equator in the ecliptic."              
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+END_OBJECT                    = TABLE                                         
+END                                                                           

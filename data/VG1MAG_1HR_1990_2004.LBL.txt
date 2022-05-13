@@ -1,0 +1,106 @@
+PDS_VERSION_ID                = PDS3                                          
+DATA_SET_ID                   = "VG1-SW-MAG-4-SUMM-HGCOORDS-1HR-V1.0"         
+PRODUCT_ID                    = "VG1MAG_1HR_1990_2004"                        
+PRODUCT_TYPE                  = DATA                                          
+PRODUCT_VERSION_ID            = "1.0"                                         
+PRODUCT_CREATION_TIME         = 2009-02-16T08:45                              
+                                                                              
+RECORD_TYPE                   = FIXED_LENGTH                                  
+RECORD_BYTES                  = 45                                            
+FILE_RECORDS                  = 83600                                         
+                                                                              
+START_TIME                    = 1990-01-01T00:00                              
+STOP_TIME                     = 2004-12-31T01:00                              
+SPACECRAFT_CLOCK_START_COUNT  = "NULL"                                        
+SPACECRAFT_CLOCK_STOP_COUNT   = "NULL"                                        
+                                                                              
+INSTRUMENT_HOST_NAME          = "VOYAGER 1"                                   
+INSTRUMENT_HOST_ID            = "VG1"                                         
+MISSION_PHASE_NAME            = "CRUISE"                                      
+TARGET_NAME                   = "SOLAR WIND"                                  
+INSTRUMENT_NAME               = "TRIAXIAL FLUXGATE MAGNETOMETER"              
+INSTRUMENT_ID                 = "MAG"                                         
+DESCRIPTION                   = "                                             
+      Voyager 1 MAG 1 hour averaged data from in Heliographic (HG)            
+      coordinates. The data begin in 1990 and go through the end of 2004."    
+                                                                              
+^TABLE                        = "VG1MAG_1HR_1990_2004.TAB"                    
+OBJECT                        = TABLE                                         
+  INTERCHANGE_FORMAT          = ASCII                                         
+  ROWS                        = 83600                                         
+  COLUMNS                     = 6                                             
+  ROW_BYTES                   = 45                                            
+  OBJECT                      = COLUMN                                        
+    NAME                      = "Spacecraft"                                  
+    COLUMN_NUMBER             = 1                                             
+    UNIT                      = "N/A"                                         
+    DATA_TYPE                 = CHARACTER                                     
+    START_BYTE                = 1                                             
+    BYTES                     = 1                                             
+    DESCRIPTION               = "                                             
+        S/C identification (Voyager 1 = 1, Voyager 2 = 2)"                    
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "UTC"                                         
+    COLUMN_NUMBER             = 2                                             
+    UNIT                      = "N/A"                                         
+    DATA_TYPE                 = CHARACTER                                     
+    START_BYTE                = 3                                             
+    BYTES                     = 11                                            
+    DESCRIPTION               = "                                             
+      Decimal year (i.e. 90.00193787)"                                        
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "Bmag"                                        
+    COLUMN_NUMBER             = 3                                             
+    UNIT                      = "nT"                                          
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 15                                            
+    BYTES                     = 7                                             
+    MISSING_CONSTANT          = 999.000                                       
+    DESCRIPTION               = "                                             
+      The magnetic field strength,  F1, computed from high-resolution         
+      observations."                                                          
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "delta"                                       
+    COLUMN_NUMBER             = 4                                             
+    UNIT                      = "DEGREE"                                      
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 23                                            
+    BYTES                     = 6                                             
+    MISSING_CONSTANT          = 999.0                                         
+    DESCRIPTION               = "                                             
+      The elevation angle (degrees) in heliographic coordinates."             
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "lambda"                                      
+    COLUMN_NUMBER             = 5                                             
+    UNIT                      = "DEGREE"                                      
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 30                                            
+    BYTES                     = 6                                             
+    MISSING_CONSTANT          = 999.0                                         
+    DESCRIPTION               = "                                             
+      The azimuthal angle (degrees) in heliographic coordinates."             
+  END_OBJECT                  = COLUMN                                        
+                                                                              
+  OBJECT                      = COLUMN                                        
+    NAME                      = "Bmag"                                        
+    COLUMN_NUMBER             = 6                                             
+    UNIT                      = "nT"                                          
+    DATA_TYPE                 = ASCII_REAL                                    
+    START_BYTE                = 37                                            
+    BYTES                     = 7                                             
+    MISSING_CONSTANT          = 999.000                                       
+    DESCRIPTION               = "                                             
+      The magnetic field strength, F2, computed from hour averages            
+      of the components. The components of B can be computed from F2          
+      and the two angles."                                                    
+  END_OBJECT                  = COLUMN                                        
+END_OBJECT                    = TABLE                                         
+END                                                                           
