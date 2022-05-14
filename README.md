@@ -8,6 +8,24 @@ The series progresses for each day from Voyager 1 launch (September 9, 1977) thr
 
 Contract: 0xAD0202597F9A14cF32c64515aA96a4c53134cc37
 
+## Technologies
+- SVG: Scalable Vector Graphics - I wanted to use SVG for this servies to move closer to an on chain solution. I decide to use IPFS because of the data set size in use, but maybe next time
+- Python
+- Solidity - implemented more on the contract in this one:
+```
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Royalty.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
+import "@openzeppelin/contracts/security/PullPayment.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "./ContextMixin.sol";
+import "./@rarible/royalties/contracts/impl/RoyaltiesV2Impl.sol";
+import "./@rarible/royalties/contracts/LibPart.sol";
+import "./@rarible/royalties/contracts/LibRoyaltiesV2.sol";
+```
+
+
 ## Variations
 
 | variation                      | description  |
