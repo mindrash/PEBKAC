@@ -1,6 +1,8 @@
 # PEBKAC
 The PEBKAC series (pebkac.fyi) is dynamically generated with location and solar wind telemetry data from the Voyager 1 spacecraft. Each is a random view from a celestial body in our solar system. The signal strength of voyager degrades over the series and is highlighted when close to one of the bodies. Major solar storms and other worldly events are highlighted along the way. More project details and variation information can be found at pebkac.fyi.
 
+This one is meant to be seen in larger views and should be good for print.
+
 ## Overview
 In this series I wanted to continue to explore interesting data sets and incorporate their influence in to the dynamic generation. While many look simple, I think there are some fun things to find along the way in the whole series. Seeing one next to another and knowing the variations between as well as from the start to the end of voyager's journey make the collection meaningful to me. The telemetry has been sourced from public domain data in the [NASA Space Science Data Coordinated Archive](https://nssdc.gsfc.nasa.gov/nmc/spacecraft/displayDataset.action?spacecraftId=1977-084A).
 
