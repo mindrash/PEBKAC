@@ -1,0 +1,27 @@
+{
+    "name": "VOYAGER 1: 1987-5-31",
+    "description": "The PEBKAC series (pebkac.fyi) is dynamically generated with location and solar wind telemetry data from the Voyager 1 spacecraft. Each is a random view from a celestial body in our solar system. The signal strength of voyager degrades over the series and is highlighted when close to one of the bodies. Major solar storms and other worldly events are highlighted along the way. More project details and variation information can be found at pebkac.fyi.",
+    "image": "ipfs://QmRRU8DA8pX9K6KTr5AKkGqoKWZsPN76o2YBXU6qc6vNFm",
+    "attributes": [
+        {
+            "trait_type": "celestial_body",
+            "value": "Moon"
+        },
+        {
+            "trait_type": "craft",
+            "value": "VOYAGER 1"
+        },
+        {
+            "trait_type": "voyager_date",
+            "value": "1987-05-31 00:00:00"
+        },
+        {
+            "trait_type": "day",
+            "value": "3552"
+        },
+        {
+            "trait_type": "location",
+            "value": "31.3000 236.40 28.6836 200.88 156.91"
+        }
+    ]
+}

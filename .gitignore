@@ -12,6 +12,7 @@ svg-templates/
 *.so
 
 # Distribution / packaging
+.DS_Store
 .Python
 build/
 develop-eggs/

@@ -48,7 +48,7 @@ def pebkac(telemetry_start_date, svg_name):
                 ["#000000", "#6f1d1b", "#bb9457", "#432818", "#99582a", "#ffe6a7"], # Mars
                 ["#0f4c5c", "#e36414", "#fb8b24", "#9a031e", "#5f0f40"], # Jupiter 
                 ["#000814", "#003566", "#ffc300", "#ffd60a"], # Saturn 
-                ["#001b59", "#35858B", "#4FBDBA", "#AEFEFF"], # Uranus :)
+                ["#001b59", "#35858B", "#4FBDBA", "#2e4ab0"], # Uranus :)
                 ["#03045E", "#00B4D8", "#90E0EF", "#CAF0F8"], # Neptune
                 ["#091353", "#9D84B7", "#D5D5D5", "#B2F9FC"], # Pluto
                 ["#000000", "#301B3F", "#3C415C", "#B4A5A5"], # X
@@ -84,17 +84,17 @@ def pebkac(telemetry_start_date, svg_name):
     palette = palette_options[randrange(0, len(palette_options))]
 
     night_sky = [
-        [["Venus", 1], ["Earth", .8], ["Earth", .7], ["Mars", .6], ["Jupiter", .6], ["Saturn", .6]], # Mercury
+        [["Venus", 1], ["Earth", 1], ["Earth", .8], ["Mars", .8], ["Jupiter", .8], ["Saturn", .8]], # Mercury
         [["Mercury", 1], ["Earth", 1], ["Earth2", .8], ["Mars", 1.0], ["Jupiter", 1.0]], # Venus
-        [["Mercury", .7], ["Venus", 1], ["Moon", 1], ["Mars", .8], ["Jupiter", .8], ["Saturn", .7]], # Earth
-        [["Mercury", .5], ["Venus", 1], ["Earth", 1], ["Mars", .8], ["Jupiter", .8], ["Saturn", .7]], # Moon
-        [["Mercury", .3], ["Venus", .8], ["Earth", 1], ["Earth", .7], ["Jupiter", 1], ["Saturn", 1.0]], # Mars
+        [["Mercury", .7], ["Venus", 1], ["Moon", 1], ["Mars", 1], ["Jupiter", 1], ["Saturn", .7]], # Earth
+        [["Mercury", .5], ["Venus", 1], ["Earth", 1], ["Mars", 1], ["Jupiter", 1], ["Saturn", .7]], # Moon
+        [["Mercury", .8], ["Venus", .8], ["Earth", 1], ["Earth", .8], ["Jupiter", 1], ["Saturn", 1.0]], # Mars
         [["Venus", .8], ["Earth", .8], ["Moon1", 1], ["Moon2", 1], ["Moon3", 1], ["Moon4", 1], ["Saturn", 1]], # Jupiter
         [["Moon1", 1],  ["Jupiter", 1]], # Saturn
-        [["Jupiter", 1], ["Saturn", 1], ["Neptune", .5]], # Uranus :)
+        [["Jupiter", 1], ["Saturn", 1], ["Neptune", .7]], # Uranus :)
         [["Jupiter", 1], ["Saturn", 1], ["Triton", 1]], # Neptune
-        [["Jupiter", .5], ["Saturn", .3], ["Moon1", 1.0]], # Pluto
-        [["Jupiter", .3], ["Saturn", .2]], # X
+        [["Jupiter", .8], ["Saturn", .7], ["Moon1", 1.0]], # Pluto
+        [["Jupiter", .8], ["Saturn", .7]], # X
     ]
 
     bodies = ["Mercury", "Venus", "Earth", "Moon", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto", "X"]
@@ -104,7 +104,7 @@ def pebkac(telemetry_start_date, svg_name):
     wave_count = randrange(2, 7)
     curve_count = randrange(8, 20)
 
-    svg = '<svg width="' + str(hor_size) + '" height="' + str(vert_size) + '" xmlns="http://www.w3.org/2000/svg">'
+    svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + str(hor_size) + 'px" height="' + str(vert_size) + 'px" version="1.1">'
     svg += '<defs>'
     svg += '<filter id="grain" x="-50vw" y="-50vh" width="100vw" height="100vh">'
     svg += '<feFlood flood-color="#ffffff" result="neutral-gray" />'
@@ -330,7 +330,7 @@ def top_label(hor, vert, exp_string, date_val):
     year = int(date_val.year)
     if len(exp_string) > 0:
         x = 40
-        y = 25
+        y = 27
 
         exp_string = "SOLAR WIND: " + exp_string
         if len(exp_string) < 80:
@@ -381,20 +381,20 @@ def voyager_signal(cy, hor_size, year, month, day, planet):
 
     signal_color = "#ffffff"
     if (year == 1977 and planet == "Earth") or (year == 1977 and planet == "Moon"):
-        signal_color = "#ffffff"
-        stroke_width = 5
+        signal_color = "#feffe6"
+        stroke_width = 3
     elif (year == 1979 and planet == "Jupiter"):
-        signal_color = "#ffffff"
-        stroke_width = 5
+        signal_color = "#feffe6"
+        stroke_width = 3
     elif (year == 1980 and planet == "Saturn"):
-        signal_color = "#ffffff"
-        stroke_width = 5
+        signal_color = "#feffe6"
+        stroke_width = 3
     elif (year == 1986 and planet == "Uranus"):
-        signal_color = "#ffffff"
-        stroke_width = 5
+        signal_color = "#feffe6"
+        stroke_width = 3
     elif (year == 1989 and planet == "Neptune"):
-        signal_color = "#ffffff"
-        stroke_width = 5
+        signal_color = "#feffe6"
+        stroke_width = 3
 
     svg = ''
     fill = "none"
