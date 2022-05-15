@@ -1,5 +1,8 @@
 ![pebkac.fyi](./docs/1400x400.png)
 # PEBKAC
+[Polyscan](https://polygonscan.com/address/0xad0202597f9a14cf32c64515aa96a4c53134cc37) | 
+[Discord](https://discord.gg/HWnrVSBC) | 
+[Twitter](https://twitter.com/mindrash)
 The PEBKAC series (pebkac.fyi) is dynamically generated with location and solar wind telemetry data from the Voyager 1 spacecraft. Each is a random view from a celestial body in our solar system. The signal strength of voyager degrades over the series and is highlighted when close to one of the bodies. Major solar storms and other worldly events are highlighted along the way. More project details and variation information can be found at pebkac.fyi.
 
 This one is meant to be seen in larger views and should be good for print with the SVG.
@@ -11,7 +14,7 @@ The series progresses for each day from Voyager 1 launch (telemetry starts Septe
 
 Contract: 0xAD0202597F9A14cF32c64515aA96a4c53134cc37
 
-Coming soon on [OpenSea](https://opensea.io/collection/pebkac-fyi) and [Rarible](https://rarible.com/pebkac-fyi/items)
+Available on [OpenSea](https://opensea.io/collection/pebkac-fyi) and [Rarible](https://rarible.com/pebkac-fyi)
 
 ### Examples
 ![pebkac.fyi](./docs/examples.png)
