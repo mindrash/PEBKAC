@@ -29,5 +29,5 @@
             <path fill="#000000" d="M 0 0 h 1200 v 1200 H 0 z" />
         </clipPath>
     </defs>
-    <path  filter="url(#grain)" fill="#001b59" d="M 0 0 h 1200 v 1200 H 0 z" />
+    <path  filter="url(#grain)" fill="red" d="M 0 0 h 1200 v 1200 H 0 z" />
 </svg>
