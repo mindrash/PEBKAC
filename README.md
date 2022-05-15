@@ -344,7 +344,7 @@ OBJECT                        = TABLE
 END_OBJECT                    = TABLE                                         
 END                                                                           
 ```
-1990-2004 - so the last in the serie will not have this expirement data
+1990-2004 - so the last in the series will not have this expirement data
 ```
 PDS_VERSION_ID                = PDS3                                          
 DATA_SET_ID                   = "VG1-SS-POS-6-1DAY-V1.0"                      
