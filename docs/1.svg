@@ -28,5 +28,8 @@
         <clipPath id="sky">
             <path fill="#000000" d="M 0 0 h 1200 v 1200 H 0 z" />
         </clipPath>
-    </defs>  
+    </defs>
+    <g filter="url(#grain)" clip-path="url(#sky)">
+        <path fill="#001b59" d="M 0 0 h 1200 v 1200 H 0 z" />
+    </g>
 </svg>
