@@ -229,7 +229,6 @@
         stroke-opacity="100%" opacity="92%"></circle>
     <circle cx="408" cy="825" r="26" stroke-width="1px" stroke-dasharray="0px 0px" fill="none" stroke="#ffffff"
         stroke-opacity="100%" opacity="92%"></circle>
-    -->
     <style>
         .voyager {
             font: 20px monospace;
@@ -273,4 +272,6 @@
     </style>
     <g id="top_label"><text x="40" y="27" class="top_label">SOLAR WIND: 0.0330 0.0330 -1.0010 0.1280 1.0097 5.460 5.270
             84.0 239.8 TRIAXIAL FLUXGATE MAGNETOMETER</text></g>
+     -->
+        
 </svg>
