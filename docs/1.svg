@@ -36,7 +36,6 @@
         <path fill="#001b59" d="M 0 0 h 1200 v 1200 H 0 z" />
     </g>
 
-    -->
     <circle cx="928" cy="457" r="3" fill-opacity="1" fill="#ffffff" />
     <circle cx="416" cy="335" r="2" fill-opacity="1" fill="#ffffff" />
     <circle cx="471" cy="556" r="2" fill-opacity="1" fill="#ffffff" />
@@ -230,6 +229,7 @@
         stroke-opacity="100%" opacity="92%"></circle>
     <circle cx="408" cy="825" r="26" stroke-width="1px" stroke-dasharray="0px 0px" fill="none" stroke="#ffffff"
         stroke-opacity="100%" opacity="92%"></circle>
+    -->
     <style>
         .voyager {
             font: 20px monospace;
