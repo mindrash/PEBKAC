@@ -29,9 +29,6 @@
             <path fill="#000000" d="M 0 0 h 1200 v 1200 H 0 z" />
         </clipPath>
     </defs>
-    <g>
-        <path fill="#001b59" d="M 0 0 h 1200 v 1200 H 0 z" />
-    </g>
 
     <g filter="url(#grain)">
         <path
