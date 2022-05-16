@@ -25,7 +25,7 @@
             <feDropShadow dx="-0.04290883798361744" dy="-0.32426161925374203" stdDeviation="0.968847344938006" />
         </filter>
         <clipPath id="sky">
-            <path fill="#000000" d="M 0 0 h 1200 v 1200 H 0 z" />
+            <path fill="red" d="M 0 0 h 1200 v 1200 H 0 z" />
         </clipPath>
     </defs>
     <g filter="url(#grain)" clip-path="url(#sky)">
