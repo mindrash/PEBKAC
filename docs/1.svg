@@ -12,9 +12,7 @@
             <feDropShadow dx="-0.04290883798361744" dy="-0.32426161925374203" stdDeviation="0.968847344938006" />
         </filter>
     </defs>
-    <g>
-        <path fill="#3C4258" d="M 0 0 h 1200 v 1200 H 0 z" />
-    </g>
+    <path fill="#3C4258" d="M 0 0 h 1200 v 1200 H 0 z" />
     <circle cx="630" cy="191" r="2" fill-opacity="1" fill="#ffffff" />
     <circle cx="1135" cy="208" r="2" fill-opacity="1" fill="#ffffff" />
     <circle cx="827" cy="299" r="62" fill="#F5F5DC" stroke="#f3f3f3" stroke-width="1" />
