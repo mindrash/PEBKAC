@@ -28,10 +28,10 @@
         <filter id="shadow">
             <feDropShadow dx="-0.23145051713739184" dy="-0.13318916331026553" stdDeviation="0.8167132410523174" />
         </filter>
-        <clipPath id="sky">
-            <path fill="#000000" d="M 0 0 h 1200 v 1200 H 0 z" />
-        </clipPath>
     </defs>
+    <g>
+        <path fill="#001b59" d="M 0 0 h 1200 v 1200 H 0 z" />
+    </g>
     <circle cx="928" cy="457" r="3" fill-opacity="1" fill="#ffffff" />
     <circle cx="416" cy="335" r="2" fill-opacity="1" fill="#ffffff" />
     <circle cx="471" cy="556" r="2" fill-opacity="1" fill="#ffffff" />
