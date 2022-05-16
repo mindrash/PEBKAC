@@ -30,7 +30,7 @@
         </clipPath>
     </defs>
     <g  clip-path="url(#sky)">
-        <path fill="#001b59" d="M 0 0 h 1200 v 1200 H 0 z" />
+        <path fill="red" d="M 0 0 h 1200 v 1200 H 0 z" />
     </g>
     <circle cx="928" cy="457" r="3" fill-opacity="1" fill="#ffffff" />
     <circle cx="416" cy="335" r="2" fill-opacity="1" fill="#ffffff" />
