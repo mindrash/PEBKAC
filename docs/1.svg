@@ -3,7 +3,7 @@
           "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="1200px" height="1200px" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg" version="1.1">
     <defs>
-        <filter id="grain" x="-50vw" y="-50vh" width="100vw" height="100vh">
+        <filter id="grain" x="0vw" y="0vh" width="1200vw" height="1200vh">
             <feFlood flood-color="#ffffff" result="neutral-gray" />
             <feTurbulence in="neutral-gray" type="fractalNoise" baseFrequency="2.8" numOctaves="100"
                 stitchTiles="stitch" result="noise" />
