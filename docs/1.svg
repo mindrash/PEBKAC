@@ -3,10 +3,12 @@
           "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="1200px" height="1200px" viewBox="0 0 1200 1200" fill="#3C4258" xmlns="http://www.w3.org/2000/svg" version="1.1">
     <defs>
+    <!--
       <filter id="grain" filterUnits="objectBoundingBox" 
               x="0%" y="0%" width="100%" height="100%">
         <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2"/>
       </filter>
+    -->
         <linearGradient id="wc0" gradientTransform="rotate(90)">
             <stop offset="5%" stop-color="#8CAE98" />
             <stop offset="95%" stop-color="#8CAE98" />
@@ -19,7 +21,6 @@
             <feDropShadow dx="-0.04290883798361744" dy="-0.32426161925374203" stdDeviation="0.968847344938006" />
         </filter>
     </defs>
-    <path filter="url(#grain)" fill="#3C4258" d="M 0 0 h 1200 v 1200 H 0 z" />
     <circle cx="630" cy="191" r="2" fill-opacity="1" fill="#ffffff" />
     <circle cx="1135" cy="208" r="2" fill-opacity="1" fill="#ffffff" />
     <circle cx="827" cy="299" r="62" fill="#F5F5DC" stroke="#f3f3f3" stroke-width="1" />
