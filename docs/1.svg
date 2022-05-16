@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200px" height="1200px" version="1.1">
     <defs>
         <filter id="grain" x="-50vw" y="-50vh" width="100vw" height="100vh">
-            <feFlood flood-color="#ffffff" result="neutral-gray" />
         </filter>
         <linearGradient id="wc0" gradientTransform="rotate(90)">
             <stop offset="5%" stop-color="#65868B" />
