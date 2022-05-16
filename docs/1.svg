@@ -18,7 +18,7 @@
         fill="#8CAE98" stroke="#cccccc" />
     <path 
         d="M 0 1028.0 c 60 -1 141 -7 221 -2 71 -19 131 -4 223 -14 69 8 141 14 224 4 68 6 138 -16 230 -8 67 -17 120 -17 252 7 65 -20 149 2 231 -16 62 6 126 -15 243 -18 61 14 142 -14 221 -11 64 16 128 -2 257 -3 l -40 1200 H 0 Z"
-        fill="#D09768" stroke="#cccccc" stroke-width="3" />
+        fill="#D09768" stroke="#cccccc" stroke-width="5" />
     <circle cx="887" cy="819" r="2000" stroke-width="3" stroke-dasharray="0px 0px" fill="none" stroke="#feffe6"
         stroke-opacity="100%" opacity="92%"></circle>
     <circle cx="887" cy="819" r="1985" stroke-width="3" stroke-dasharray="0px 0px" fill="none" stroke="#feffe6"
