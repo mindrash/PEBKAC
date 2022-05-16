@@ -18,8 +18,8 @@ def main():
 
     #telemetry_start_date = datetime.datetime(1990, 9, 9)
     telemetry_start_date = datetime.datetime(1977, 9, 9)
-    #telemetry_end_date = datetime.datetime(1978, 10, 9)
-    telemetry_end_date = datetime.datetime(2005, 1, 21)
+    telemetry_end_date = datetime.datetime(1978, 10, 9)
+    #telemetry_end_date = datetime.datetime(2005, 1, 21)
     delta = datetime.timedelta(days=1)
     svg_count = 1
     
@@ -104,19 +104,15 @@ def pebkac(telemetry_start_date, svg_name):
     wave_count = randrange(2, 7)
     curve_count = randrange(8, 20)
 
-    svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + str(hor_size) + 'px" height="' + str(vert_size) + 'px" version="1.1">'
-    svg += '<defs>'
-    svg += '<filter id="grain" x="-50vw" y="-50vh" width="100vw" height="100vh">'
-    svg += '<feFlood flood-color="#ffffff" result="neutral-gray" />'
-    svg += '<feTurbulence in="neutral-gray" type="fractalNoise" baseFrequency="2.8" numOctaves="100" stitchTiles="stitch" result="noise" />'
-    svg += '<feColorMatrix in="noise" type="saturate" values="0" result="destaturatedNoise"></feColorMatrix>'
-    svg += '<feComponentTransfer in="desaturatedNoise" result="theNoise"><feFuncA type="table" tableValues="0 0 0.3 0"></feFuncA></feComponentTransfer>'
-    svg += '<feBlend in="SourceGraphic" in2="theNoise" mode="soft-light" result="noisy-image"/></filter>'
+    svg = '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">'
 
     body_count = randrange(0, len(palette)) # Ice-T!
     logging.info("Celetial body: " + bodies[body_count])
     base_path_color = palette[body_count][0]
-
+    svg += '<svg width="' + str(hor_size) + 'px" height="' + str(vert_size) + 'px"  style="background-color:' + base_path_color + '" xmlns="http://www.w3.org/2000/svg" version="1.1">'
+    svg += '<defs>'
+    #svg += '<filter id="grain" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.4" numOctaves="4"/></filter>'
+    svg += '</defs>'
     day_of_year = voyager_date.toordinal() - datetime.date(voyager_date.year, 1, 1).toordinal() + 1
 
     exp_string = ""
@@ -145,33 +141,6 @@ def pebkac(telemetry_start_date, svg_name):
                         exp_string = (' ').join([items[2], items[3], items[3], items[5]])
                         break
 
-
-    count = 0
-    prev_color = ""
-    while count < wave_count:
-        new_color = get_random_color(palette[body_count], prev_color, base_path_color)
-        stop_color1 = new_color
-        stop_color2 = new_color
-        svg += '<linearGradient id="wc' + str(count) + '" gradientTransform="rotate(90)">'
-        svg += '<stop offset="5%" stop-color="' + stop_color1 + '" />'
-        svg += '<stop offset="95%" stop-color="' + stop_color2 + '" />'
-        svg += '</linearGradient>'
-        count += 1
-
-    shadow_filter_dx = random.uniform(-.3, 0)
-    shadow_filter_dy = random.uniform(-.5, 0)
-    shadow_filter_stdDeviation = random.uniform(.5, 1)
-
-    svg += '<filter id="shadow"><feDropShadow dx="' + str(shadow_filter_dx) + '" dy="' + str(shadow_filter_dy) + '" stdDeviation="' + str(shadow_filter_stdDeviation) + '"/></filter>'
-    svg += '<clipPath id="sky">'
-    svg += '<path fill="' + "#000000" + '" d="M 0 0 h ' + str(hor_size) + ' v ' + str(vert_size) + ' H 0 z" />'
-    svg += '</clipPath>'
-    svg += '</defs>'
-
-    svg += '<g filter="url(#grain)" clip-path="url(#sky)">'
-    svg += '<path fill="' + base_path_color + '" d="M 0 0 h ' + str(hor_size) + ' v ' + str(vert_size) + ' H 0 z" />'
-    svg += '</g>'
-
     for item in night_sky[body_count]:
         cx = randrange(0, 1200)
         cy = randrange(0, 600)
@@ -195,7 +164,11 @@ def pebkac(telemetry_start_date, svg_name):
 
     count = 0
     last_start_y = 0
+    prev_color = ""
+    stroke = "#747373"
     while count < wave_count:
+        path_color = get_random_color(palette[body_count], prev_color, base_path_color)
+        prev_color = path_color
         if last_start_y == 0:
             pen_y = start_y
             last_start_y = start_y
@@ -203,14 +176,15 @@ def pebkac(telemetry_start_date, svg_name):
             pen_y = last_start_y + randrange(10, 200)
             last_start_y = pen_y
 
-        svg += '<g filter="url(#grain)"><path d="M 0 ' + str(pen_y) + ' c '
+        stroke_width = str(randrange(0, 5))
+        svg += '<path stroke="' + stroke + '" stroke-width="' + stroke_width + '" fill="' + path_color + '" d="M 0 ' + str(pen_y) + ' c '
 
         curve_counter = 0
         while curve_counter < curve_count:        
             svg += get_curve()
             curve_counter += 1
 
-        svg += 'l -40 ' + str(hor_size) + ' H 0 Z" fill="url(#wc' + str(count) + ')" filter="url(#shadow)" /></g>'
+        svg += 'l -40 ' + str(hor_size) + ' H 0 Z" />'
         count += 1
 
     if (voyager_signal_cy + 40 < start_y):
