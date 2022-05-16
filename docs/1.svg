@@ -15,9 +15,6 @@
         <filter id="shadow">
             <feDropShadow dx="-0.23145051713739184" dy="-0.13318916331026553" stdDeviation="0.8167132410523174" />
         </filter>
-        <clipPath id="sky">
-            <path fill="#000000" d="M 0 0 h 1200 v 1200 H 0 z" />
-        </clipPath>
     </defs>
     <g >
         <path fill="red" d="M 0 0 h 1200 v 1200 H 0 z" />
