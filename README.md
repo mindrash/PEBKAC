@@ -18,7 +18,7 @@ Contract: 0xf921a31350578f590468c2b5c1e749c22f625b46
 Available on [OpenSea](https://opensea.io/collection/pebkacfyi) and [Rarible](https://rarible.com/pebkacfyi)
 
 ### Examples
-![pebkac.fyi](./docs/examples.png)
+![pebkac.fyi](./docs/examples2.png)
 
 ## Technologies
 - Polygon
