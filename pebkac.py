@@ -109,9 +109,9 @@ def pebkac(telemetry_start_date, svg_name):
     body_count = randrange(0, len(palette)) # Ice-T!
     logging.info("Celetial body: " + bodies[body_count])
     base_path_color = palette[body_count][0]
-    svg += '<svg width="' + str(hor_size) + 'px" height="' + str(vert_size) + 'px"  style="background-color:' + base_path_color + '" xmlns="http://www.w3.org/2000/svg" version="1.1">'
+    svg += '<svg width="' + str(hor_size) + 'px" height="' + str(vert_size) + 'px"  style="background-color:' + base_path_color + '" xmlns="http://www.w3.org/2000/svg" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs">'
     svg += '<defs>'
-    #svg += '<filter id="grain" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.4" numOctaves="4"/></filter>'
+    svg += '<filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="fractalNoise" baseFrequency="0.103" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence><feSpecularLighting surfaceScale="13" specularConstant="0.9" specularExponent="20" lighting-color="hsl(23, 0%, 100%)" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting"><feDistantLight azimuth="3" elevation="91"></feDistantLight></feSpecularLighting></filter>'
     svg += '</defs>'
     day_of_year = voyager_date.toordinal() - datetime.date(voyager_date.year, 1, 1).toordinal() + 1
 
@@ -184,7 +184,7 @@ def pebkac(telemetry_start_date, svg_name):
             svg += get_curve()
             curve_counter += 1
 
-        svg += 'l -40 ' + str(hor_size) + ' H 0 Z" />'
+        svg += 'l -40 ' + str(hor_size) + ' H 0 Z" filter="url(#nnnoise-filter)" />'
         count += 1
 
     if (voyager_signal_cy + 40 < start_y):
