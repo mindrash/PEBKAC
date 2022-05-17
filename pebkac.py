@@ -16,10 +16,8 @@ def main():
     logging.info(console_line)
     logging.info("Starting: " + str(datetime.datetime.now()))
 
-    #telemetry_start_date = datetime.datetime(1990, 9, 9)
     telemetry_start_date = datetime.datetime(1977, 9, 9)
-    telemetry_end_date = datetime.datetime(1978, 10, 9)
-    #telemetry_end_date = datetime.datetime(2005, 1, 21)
+    telemetry_end_date = datetime.datetime(2005, 1, 21)
     delta = datetime.timedelta(days=1)
     svg_count = 1
     
@@ -80,6 +78,8 @@ def pebkac(telemetry_start_date, svg_name):
                 ["#02055A", "#6D5C55", "#6D5C55", "#4B2A57", "#341C3A"], # X
             ],
         ]
+
+    stroke_options = ["#747373", "#434343", "#C6B8B8", "#E9ECD2", "#5F6342", "#A3A3A3"]
 
     palette = palette_options[randrange(0, len(palette_options))]
 
@@ -168,7 +168,8 @@ def pebkac(telemetry_start_date, svg_name):
     count = 0
     last_start_y = 0
     prev_color = ""
-    stroke = "#747373"
+    stroke = stroke_options[randrange(0, len(stroke_options) - 1)]
+    path = ""
     while count < wave_count:
         path_color = get_random_color(palette[body_count], prev_color, base_path_color)
         prev_color = path_color
@@ -179,15 +180,19 @@ def pebkac(telemetry_start_date, svg_name):
             pen_y = last_start_y + randrange(10, 200)
             last_start_y = pen_y
 
-        stroke_width = str(randrange(0, 5))
-        svg += '<path stroke="' + stroke + '" stroke-width="' + stroke_width + '" fill="' + path_color + '" d="M 0 ' + str(pen_y) + ' c '
+        stroke_width = "0"
+        if 0 == randrange(0, 2):
+            stroke_width = str(randrange(0, 3))
+
+        path += '<path stroke="' + stroke + '" stroke-width="' + stroke_width + '" fill="' + path_color + '" d="M 0 ' + str(pen_y) + ' c '
 
         curve_counter = 0
         while curve_counter < curve_count:        
-            svg += get_curve()
+            path += get_curve()
             curve_counter += 1
 
-        svg += 'l -40 ' + str(hor_size) + ' H 0 Z" />'
+        path += 'l -40 ' + str(hor_size) + ' H 0 Z" />'
+        svg += path
         count += 1
 
     if (voyager_signal_cy + 40 < start_y):
@@ -366,7 +371,7 @@ def voyager_signal(cy, hor_size, year, month, day, planet):
     elif (year == 1980 and planet == "Saturn"):
         signal_color = "#feffe6"
         stroke_width = 3
-    elif (year == 1986 and planet == "Uranus"):
+    elif (year == 1986 and planet == "Uranus"): # heh
         signal_color = "#feffe6"
         stroke_width = 3
     elif (year == 1989 and planet == "Neptune"):
@@ -455,20 +460,6 @@ def clamp(val, minimum=0, maximum=255):
     return val
 
 def colorscale(hexstr, scalefactor):
-    """
-    Scales a hex string by ``scalefactor``. Returns scaled hex string.
-
-    To darken the color, use a float value between 0 and 1.
-    To brighten the color, use a float value greater than 1.
-
-    >>> colorscale("#DF3C3C", .5)
-    #6F1E1E
-    >>> colorscale("#52D24F", 1.6)
-    #83FF7E
-    >>> colorscale("#4F75D2", 1)
-    #4F75D2
-    """
-
     hexstr = hexstr.strip('#')
 
     if scalefactor < 0 or len(hexstr) != 6:

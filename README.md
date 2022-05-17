@@ -1,6 +1,6 @@
 ![pebkac.fyi](./docs/1400x400.png)
 # PEBKAC.fyi
-[Polyscan](https://polygonscan.com/address/0xad0202597f9a14cf32c64515aa96a4c53134cc37) | 
+[Polyscan](https://polygonscan.com/address/0xf921a31350578f590468c2b5c1e749c22f625b46) | 
 [Discord](https://discord.gg/HWnrVSBC) | 
 [Twitter](https://twitter.com/mindrash)
 <br/><br/>
@@ -13,9 +13,9 @@ In this series I wanted to continue to explore interesting data sets and incorpo
 
 The series progresses for each day from Voyager 1 launch (telemetry starts September 9, 1977) through the end of location telemetry data available in the data set (January 24, 2005). Included are two data sets for location telemetry and solar wind experiment metrics. More detail on these can be found below.
 
-Contract: 0xAD0202597F9A14cF32c64515aA96a4c53134cc37
+Contract: 0xf921a31350578f590468c2b5c1e749c22f625b46
 
-Available on [OpenSea](https://opensea.io/collection/pebkac-fyi) and [Rarible](https://rarible.com/pebkac-fyi)
+Available on [OpenSea](https://opensea.io/collection/pebkacfyi) and [Rarible](https://rarible.com/pebkacfyi)
 
 ### Examples
 ![pebkac.fyi](./docs/examples.png)
