@@ -14,7 +14,7 @@ This one is meant to be seen in larger views and should be good for print with t
 ## Overview
 In this series I wanted to continue to explore interesting data sets and incorporate their influence in to the dynamic generation. While many look simple, I think there are some fun things to find along the way in the whole series. Seeing one next to another and knowing the variations between as well as from the start to the end of voyager's journey make the collection meaningful to me. The telemetry has been sourced from public domain data in the [NASA Space Science Data Coordinated Archive](https://nssdc.gsfc.nasa.gov/nmc/spacecraft/displayDataset.action?spacecraftId=1977-084A).
 
-The series progresses for each day from Voyager 1 launch (telemetry starts September 9, 1977) through the end of location telemetry data available in the data set (January 24, 2005). Included are two data sets for location telemetry and solar wind experiment metrics. More detail on these can be found below.
+The series progresses for each day from the beginning of the Voyager 1 journey (telemetry starts September 9, 1977) through the end of location telemetry data available in the data set (January 24, 2005). Included are two data sets for location telemetry and solar wind experiment metrics. More detail on these can be found below.
 
 Contract: 0xf921a31350578f590468c2b5c1e749c22f625b46
 
