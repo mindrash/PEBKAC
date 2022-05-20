@@ -30,7 +30,7 @@ def main():
     logging.info("Finished: " + str(datetime.datetime.now()))
 
 def pebkac(telemetry_start_date, svg_name):
-    description = "The PEBKAC series (pebkac.fyi) is dynamically generated with location and solar wind telemetry data from the Voyager 1 spacecraft. Each is a random view from a celestial body in our solar system. The signal strength of voyager degrades over the series and is highlighted when close to one of the bodies. Major solar storms and other worldly events are highlighted along the way. More project details and variation information can be found at pebkac.fyi."
+    description = "Dynamically generated with location and solar wind telemetry data from the Voyager 1 spacecraft."
     voyager_craft = "VOYAGER 1"
     ipfs_url = "[[IPFS]]"
     voyager_location = ""
@@ -104,12 +104,12 @@ def pebkac(telemetry_start_date, svg_name):
     wave_count = randrange(2, 7)
     curve_count = randrange(8, 20)
 
-    svg = '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">'
+    svg = ''
 
     body_count = randrange(0, len(palette)) # Ice-T!
     logging.info("Celetial body: " + bodies[body_count])
     base_path_color = palette[body_count][0]
-    svg += '<svg width="' + str(hor_size) + 'px" height="' + str(vert_size) + 'px" xmlns="http://www.w3.org/2000/svg" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs">'
+    svg += '<svg xmlns="http://www.w3.org/2000/svg" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 1200 1200" width="1200" height="1200">'
     svg += '<defs>'
     svg += '<filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB"><feTurbulence type="fractalNoise" baseFrequency="0.103" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence><feSpecularLighting surfaceScale="13" specularConstant="0.9" specularExponent="20" lighting-color="hsl(23, 0%, 100%)" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting"><feDistantLight azimuth="3" elevation="91"></feDistantLight></feSpecularLighting></filter>'
     svg += '</defs>'
@@ -160,7 +160,7 @@ def pebkac(telemetry_start_date, svg_name):
             svg += '<circle cx="' + str(cx) + '" cy="' + str(cy) + '" r="' + str(radius) + '" fill="' + moon_colors[color_dim] + '" stroke="#f3f3f3" stroke-width="1" />'
 
     voyager_signal_cy = randrange(0, vert_size)
-    start_y = vert_size / wave_count + randrange(10, 400)
+    start_y = vert_size / wave_count + randrange(250, 450)
 
     if (voyager_signal_cy + 40 > start_y):
         svg += voyager_signal(voyager_signal_cy, hor_size, voyager_date.year, voyager_date.month, voyager_date.day, bodies[body_count])
@@ -213,11 +213,12 @@ def pebkac(telemetry_start_date, svg_name):
         svg_file.write(svg)
 
     data_name = str(svg_name) + ".json"
-    ipfs_url = "ipfs://[[IPS_URL]]/" + str(svg_name) + ".svg"
+    ipfs_url = "ipfs://[[IPFS_URL]]"
     nft_json = {
-        "name" : voyager_craft + ": " + ('-').join([str(voyager_date.year), str(voyager_date.month), str(voyager_date.day)]),
         "description" : description,
+        "external_url" : "https://pebkac.fyi",
         "image" : ipfs_url,
+        "name" : voyager_craft + ": " + ('-').join([str(voyager_date.year), str(voyager_date.month), str(voyager_date.day)]),
         "attributes" : [
             {
                 "trait_type" : "celestial_body",
@@ -239,11 +240,11 @@ def pebkac(telemetry_start_date, svg_name):
                 "trait_type" : "location",
                 "value" : voyager_location
             },
-        ]
+        ],
     }
 
     with open("meta_out/" + data_name, "w") as data_file:
-        json.dump(nft_json, data_file, indent = 4)
+        json.dump(nft_json, data_file)
 
     return True
 

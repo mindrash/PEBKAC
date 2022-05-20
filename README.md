@@ -2,11 +2,15 @@
 # PEBKAC.fyi
 [Polyscan](https://polygonscan.com/address/0xf921a31350578f590468c2b5c1e749c22f625b46) | 
 [Discord](https://discord.gg/HWnrVSBC) | 
-[Twitter](https://twitter.com/mindrash)
+[Twitter](https://twitter.com/mindrash) | 
+[metadevil.io](https://metadevil.io)
+
 <br/><br/>
 The PEBKAC.fyi series (https://pebkac.fyi) is dynamically generated with location and solar wind telemetry data from the Voyager 1 spacecraft. Each is a random view from a celestial body in our solar system. The signal strength of voyager degrades over the series and is highlighted when close to one of the bodies. Major solar storms and other worldly events are highlighted along the way. More project details and variation information can be found at pebkac.fyi.
 
 This one is meant to be seen in larger views and should be good for print with the SVG.
+
+<b>1977-9-9 through 1977-10-31 on sale now on [OpenSea](https://opensea.io/collection/pebkacfyi)</b>. Also check out the [metadevil.io](https://metadevil.io) collection.
 
 ## Overview
 In this series I wanted to continue to explore interesting data sets and incorporate their influence in to the dynamic generation. While many look simple, I think there are some fun things to find along the way in the whole series. Seeing one next to another and knowing the variations between as well as from the start to the end of voyager's journey make the collection meaningful to me. The telemetry has been sourced from public domain data in the [NASA Space Science Data Coordinated Archive](https://nssdc.gsfc.nasa.gov/nmc/spacecraft/displayDataset.action?spacecraftId=1977-084A).
@@ -22,7 +26,7 @@ Available on [OpenSea](https://opensea.io/collection/pebkacfyi) and [Rarible](ht
 
 ## Technologies
 - Polygon
-- SVG: Scalable Vector Graphics - I wanted to use SVG for this servies to move closer to an on chain solution. I decide to use IPFS because of the data set size in use, but maybe next time
+- SVG: Scalable Vector Graphics - I wanted to use SVG for this servies to move closer to an on chain solution. I decide to use IPFS because of the data set size in use, but maybe next time.
 - Python
 - Solidity - implemented more on the contract in this one:
 ```
