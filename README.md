@@ -473,4 +473,9 @@ END
 ```
 
 ## Analysis
-Will provide examples and some analysis after mint.
+
+  <nft-card
+  contractAddress="0xf921a31350578f590468c2b5c1e749c22f625b46"
+  tokenId="1">
+  </nft-card>
+  <script src="https://unpkg.com/embeddable-nfts/dist/nft-card.min.js"></script>
