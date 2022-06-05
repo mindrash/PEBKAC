@@ -3,7 +3,10 @@
 [Polyscan](https://polygonscan.com/address/0xf921a31350578f590468c2b5c1e749c22f625b46) | 
 [Discord](https://discord.gg/HWnrVSBC) | 
 [Twitter](https://twitter.com/mindrash) | 
-[metadevil.io](https://metadevil.io)
+[OpenSea](https://opensea.io/collection/pebkacfyi) | 
+[Rarible](https://rarible.com/pebkacfyi) | 
+[metadevil.io](https://metadevil.io) | 
+[itsmookie.com](https://itsmookie.com) 
 <br/><br/>
 The PEBKACFYI series (https://pebkac.fyi) is dynamically generated with location and solar wind telemetry data from the Voyager 1 spacecraft. Each is a random view from a celestial body in our solar system. The signal strength of voyager degrades over the series and is highlighted when close to one of the bodies. Major solar storms and other worldly events are highlighted along the way. More project details and variation information can be found at pebkac.fyi.
 
@@ -480,3 +483,12 @@ END
 </p>
 <br clear="all"/>
 <br clear="all"/>
+
+[Polyscan](https://polygonscan.com/address/0xf921a31350578f590468c2b5c1e749c22f625b46) | 
+[Discord](https://discord.gg/HWnrVSBC) | 
+[Twitter](https://twitter.com/mindrash) | 
+[OpenSea](https://opensea.io/collection/pebkacfyi) | 
+[Rarible](https://rarible.com/pebkacfyi) | 
+[metadevil.io](https://metadevil.io) | 
+[itsmookie.com](https://itsmookie.com) 
+
